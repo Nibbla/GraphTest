@@ -80,7 +80,9 @@ public class ThreeDScatterPanel extends  AbstractAnalysis implements BoardView  
         if (savedChart == null) return;
 
         ArrayList<Scatter> scatter = new ArrayList<>();
-
+        for (Player p : players){
+            scatter.add(new Scatter(p.getBall().getPointsForScatter(),Type.Ball.getColorJzy3dC()));
+        }
         scatter.add(new Scatter(course.getPointsForScatter(), course.getColorsForScatter()));
 
 
